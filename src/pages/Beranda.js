@@ -1,7 +1,11 @@
+import { Header } from "../components/Beranda/Header";
 import { Navbar } from "../components/Beranda/Navbar";
 
 export const Beranda = () => {
     return (
-        <Navbar/>
+        <div className="beranda">
+            <Navbar/>
+            <Header/>
+        </div>
     );
 }

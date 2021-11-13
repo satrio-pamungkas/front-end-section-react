@@ -3,10 +3,10 @@ import Logo from '../../assets/img/LogoNavbar.svg';
 export const Navbar = () => {
     return (
         <>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-lg navbar-custom">
             <div className="container">
-                <a className="navbar-brand" href="#">
-                    <img src={Logo}></img>
+                <a className="navbar-brand" href="http://localhost:3000">
+                    <img src={Logo} alt="LogoNavbar"></img>
                 </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -14,19 +14,19 @@ export const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarText">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="#">BERANDA</a>
+                            <a className="nav-link active" aria-current="page" href="http://localhost:3000">BERANDA</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">AGENDA</a>
+                            <a className="nav-link" href="http://localhost:3000">AGENDA</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">LINIMASA</a>
+                            <a className="nav-link" href="http://localhost:3000">LINIMASA</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">FAQ</a>
+                            <a className="nav-link" href="http://localhost:3000">FAQ</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">KONTAK</a>
+                            <a className="nav-link" href="http://localhost:3000">KONTAK</a>
                         </li>
                     </ul>
                     <span className="navbar-text">
