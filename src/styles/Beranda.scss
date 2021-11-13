@@ -1,5 +1,9 @@
 @import './commons.scss';
 
+$theme-colors: (
+  "primary": $primary,
+);
+
 .beranda {
     .navbar-custom {
         background-color: #1A1A1A;
@@ -42,7 +46,7 @@
         }
     }
 
-    .row {
+    #header .row {
         background: url("../assets/img/BackgroundHeader.png");
         background-repeat: no-repeat;
         background-size: cover;
@@ -112,12 +116,52 @@
                 background-color: #474646;
             }
         }
+    }
+    
+    #speakers {
+      background-color: #1A1A1A;
+      color: #fff;
+      width: 100%;
+    
+      .header {
+        margin: 30px 10%;
+    
+        h2 {
+          font-weight: bold;
+        }
+      }
+    
+      img {
+        background: url('../assets//img/LogoSection.svg');
+        width: 150px;
+        min-height: 150px;
+        margin: 20px;
+      }
+    
+      h4 {
+        font-weight: bold;
+      }
+    
+      p {
+        b {
+          color: $primary;
+        }
+      }
+    }
+    
+    #register {
+      background-color: #1A1A1A;
 
-
+      img {
+        width: 580px;
+      }
+      a {
+        border-radius: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
     }
 }
-
-
 
 @media only screen and (max-width: 992px) {
     .navbar {
