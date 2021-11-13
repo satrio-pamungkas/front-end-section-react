@@ -1,5 +1,9 @@
 @import './commons.scss';
 
+.body {
+    background-color: #1A1A1A;
+}
+
 .beranda {
     .navbar-custom {
         background-color: #1A1A1A;
@@ -42,7 +46,7 @@
         }
     }
 
-    .row {
+    .row.header {
         background: url("../assets/img/BackgroundHeader.png");
         background-repeat: no-repeat;
         background-size: cover;
@@ -113,7 +117,14 @@
             }
         }
 
+    }
 
+    .col.countdown {
+        background-color: #1A1A1A;
+
+        h1 {
+            margin-bottom: 0px;
+        }
     }
 }
 

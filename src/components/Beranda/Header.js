@@ -2,7 +2,7 @@ import Logo from '../../assets/img/LogoSection.svg';
 
 export const Header = () => {
     return (
-        <div className="row">
+        <div className="row header">
             <div className="col-3"></div>
             <div className="col-6">
                 <img className="logo-section" src={Logo} alt="LogoSection"></img>
