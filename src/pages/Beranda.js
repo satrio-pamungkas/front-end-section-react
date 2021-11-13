@@ -1,7 +1,7 @@
-import { Alert } from "../components/Beranda/Alert";
+import { Navbar } from "../components/Beranda/Navbar";
 
 export const Beranda = () => {
     return (
-        <Alert/>
+        <Navbar/>
     );
 }
