@@ -326,6 +326,26 @@
         }
     }
 
+    #acara {
+        background-color: map-get(c.$theme-colors, "tertiary");
+
+        h4 {
+            color: map-get(c.$theme-colors, "primary");
+        }
+
+        .container {
+            .row {
+                .line {
+                    border-bottom: 4px solid white;
+                    border-radius: 4px;
+                }
+
+                .benefit {
+                    margin-top: -20%;
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 992px) {
