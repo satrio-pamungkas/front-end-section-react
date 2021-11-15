@@ -1,5 +1,8 @@
 @import './commons.scss';
 
+$card-bg: #232323;
+$card-border-radius: 20px;
+
 .beranda {
     #header .row {
         background: url("../assets/img/BackgroundHeader.png");
@@ -205,34 +208,33 @@
         padding-top: 10%;
         font-family: $open-sans;
 
-        h2 {
+        h2, h4 {
             font-weight: bold;
             font-family: $raleway;
         }
-
-        ul {
-            margin-left: 4em;
-            margin-right: 0;
+        
+        .narahubung {
+            list-style: none;
 
             li {
-                margin: 1em 0;
+                margin-bottom: 15px;
+                
                 a {
                     text-decoration: none;
+                    color: #fff;
                 }
-            }
-        }
-
-        .kontak-narahubung {
-            .col-md-4 {
-                padding: 10px;
-                width: fit-content;
-            }
-
-            .line {
-                background-color: #fff;
-                padding: 0 1pt;
-                width: 2pt;
-                margin: 0 5%;
+                
+                .icon {
+                    width: 35px;
+                    height: 35px;
+                    position: relative;
+                    top: 6px;
+                    margin-right: 10px;
+                    fill: #fff;
+                    background-color: #474646;
+                    border-radius: 50%;
+                    padding: 8px;
+                }
             }
         }
     }
@@ -244,16 +246,6 @@
             button {
                 background-color: black;
             }
-        }
-    }
-
-    .kontak-narahubung {
-        .line {
-            display: none;
-        }
-        .col-md-4 {
-            width: 100%;
-            border: 0pt solid orange;
         }
     }
 }
