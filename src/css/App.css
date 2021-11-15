@@ -11313,9 +11313,10 @@ textarea.form-control-lg {
 .beranda .footer-clean {
   padding: 50px 0;
   background-color: #1F1F1F;
-  color: #4b4c4d;
+  color: white;
 }
 .beranda .footer-clean h3 {
+  color: #FFC700;
   margin-top: 0;
   margin-bottom: 12px;
   font-weight: bold;
@@ -11347,7 +11348,7 @@ textarea.form-control-lg {
   display: inline-block;
   text-align: center;
   border-radius: 50%;
-  border: 1px solid #ccc;
+  background-color: #414141;
   margin-left: 10px;
   margin-top: 22px;
   color: inherit;
