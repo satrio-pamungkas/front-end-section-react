@@ -1,51 +1,6 @@
 @import './commons.scss';
 
-$theme-colors: (
-  "primary": $primary,
-);
-
 .beranda {
-    .navbar-custom {
-        background-color: #1A1A1A;
-    }
-
-    .navbar {
-        .container {
-            margin-top: 2px;
-            margin-bottom: 2px;
-
-            .nav-item {
-                font-family: $open-sans;
-                font-size: 14px;
-                font-weight: 400;
-                margin-left: 14px;
-                margin-right: 14px;
-
-                .nav-link:link {
-                    color: white !important;
-                }
-        
-                .nav-link:hover {
-                    color: #FFC700 !important;
-                }
-
-            }
-
-            button {
-                border-radius: 20px;
-                font-family: $open-sans;
-                font-size: 14px;
-                font-weight: 600;
-                background-color: #FFC700;
-            }
-
-            button:hover {
-                background-color: #e7b709;
-            }
-
-        }
-    }
-
     #header .row {
         background: url("../assets/img/BackgroundHeader.png");
         background-repeat: no-repeat;
@@ -92,7 +47,7 @@ $theme-colors: (
                 font-weight: 600;
                 height: 40px;
                 width: 175px;
-                background-color: #FFC700;
+                background-color: $primary;
                 margin-right: 10px;
             }
 
@@ -105,12 +60,12 @@ $theme-colors: (
                 font-family: $open-sans;
                 font-size: 14px;
                 font-weight: 600;
-                color: #FFC700;
+                color: $primary;
                 height: 40px;
                 width: 175px;
-                background-color: #1A1A1A;
+                background-color: $bg-color;
                 margin-left: 10px;
-                border-color: #FFC700;
+                border-color: $primary;
             }
 
             .agenda:hover {
@@ -121,7 +76,7 @@ $theme-colors: (
     }
 
     .col.countdown {
-        background-color: #1A1A1A;
+        background-color: $bg-color;
 
         .wave {
             width: 100%;
@@ -155,7 +110,7 @@ $theme-colors: (
                     font-family: $open-sans;
                     font-weight: 800;
                     font-size: 54px;
-                    color: #1A1A1A;
+                    color: $bg-color;
                     position: absolute;
                     top: 0;
                     margin-top: 30px;
@@ -183,9 +138,10 @@ $theme-colors: (
     }
     
     #speakers {
-      background-color: #1A1A1A;
+      background-color: $bg-color;
       color: #fff;
       width: 100%;
+      padding-top: 10%;
     
       .header {
         margin: 30px 10%;
@@ -230,7 +186,8 @@ $theme-colors: (
     }
     
     #register {
-      background-color: #1A1A1A;
+      background-color: $bg-color;
+      padding-top: 10%;
 
       img {
         width: 580px;
@@ -241,6 +198,44 @@ $theme-colors: (
         font-weight: bold;
       }
     }
+
+    #kontak {
+        color: #fff;
+        background-color: $bg-color;
+        padding-top: 10%;
+        font-family: $open-sans;
+
+        h2 {
+            font-weight: bold;
+            font-family: $raleway;
+        }
+
+        ul {
+            margin-left: 4em;
+            margin-right: 0;
+
+            li {
+                margin: 1em 0;
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .kontak-narahubung {
+            .col-md-4 {
+                padding: 10px;
+                width: fit-content;
+            }
+
+            .line {
+                background-color: #fff;
+                padding: 0 1pt;
+                width: 2pt;
+                margin: 0 5%;
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 992px) {
@@ -249,6 +244,16 @@ $theme-colors: (
             button {
                 background-color: black;
             }
+        }
+    }
+
+    .kontak-narahubung {
+        .line {
+            display: none;
+        }
+        .col-md-4 {
+            width: 100%;
+            border: 0pt solid orange;
         }
     }
 }
