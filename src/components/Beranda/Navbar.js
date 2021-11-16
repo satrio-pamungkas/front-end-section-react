@@ -1,4 +1,6 @@
 import Logo from '../../assets/img/LogoNavbar.svg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 export const Navbar = () => {
     return (
@@ -9,7 +11,7 @@ export const Navbar = () => {
                     <img src={Logo} alt="LogoNavbar"></img>
                 </a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
+                    <FontAwesomeIcon icon={faBars} size="lg" style={{ color: 'black' }} />
                 </button>
                 <div className="collapse navbar-collapse" id="navbarText">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
