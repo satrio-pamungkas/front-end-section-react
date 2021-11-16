@@ -1,46 +1,6 @@
 @use './commons'as c;
 
 .beranda {
-    .navbar-custom {
-        background-color: map-get(c.$theme-colors, "tertiary");
-    }
-
-    .navbar {
-        .container {
-            margin-top: 2px;
-            margin-bottom: 2px;
-
-            .nav-item {
-                font-family: c.$open-sans;
-                font-size: 14px;
-                font-weight: 400;
-                margin-left: 14px;
-                margin-right: 14px;
-
-                .nav-link {
-                    color: white !important;
-                }
-
-                .nav-link:hover {
-                    color: map-get(c.$theme-colors, "primary") !important;
-                }
-
-            }
-
-            button {
-                border-radius: 20px;
-                font-family: c.$open-sans;
-                font-size: 14px;
-                font-weight: 600;
-                background-color: map-get(c.$theme-colors, "primary");
-            }
-
-            button:hover {
-                background-color: map-get(c.$theme-colors, "nonary");
-            }
-
-        }
-    }
 
     #header .row {
         background: url("../assets/img/BackgroundHeader.png");
@@ -182,6 +142,7 @@
         background-color: map-get(c.$theme-colors, "tertiary");
         color: white;
         width: 100%;
+        padding-top: 10%;
 
         .header {
             margin: 30px 10%;
@@ -236,6 +197,43 @@
             border-radius: 20px;
             text-transform: uppercase;
             font-weight: bold;
+        }
+    }
+
+    #kontak {
+        color: #fff;
+        background-color: map-get(c.$theme-colors, "tertiary");
+        padding-top: 10%;
+        font-family: c.$open-sans;
+
+        h2, h4 {
+            font-weight: bold;
+            font-family: c.$raleway;
+        }
+        
+        .narahubung {
+            list-style: none;
+
+            li {
+                margin-bottom: 15px;
+                
+                a {
+                    text-decoration: none;
+                    color: #fff;
+                }
+                
+                .icon {
+                    width: 35px;
+                    height: 35px;
+                    position: relative;
+                    top: 6px;
+                    margin-right: 10px;
+                    fill: #fff;
+                    background-color: #474646;
+                    border-radius: 50%;
+                    padding: 8px;
+                }
+            }
         }
     }
 

@@ -1,0 +1,31 @@
+@use './commons'as c;
+
+$accordion-color: #fff;
+$accordion-bg: map-get(c.$theme-colors, "tertiary");
+$component-active-bg: map-get(c.$theme-colors, "primary");
+$accordion-button-active-bg: map-get(c.$theme-colors, "primary");
+$accordion-button-active-color: map-get(c.$theme-colors, "tertiary");
+
+.faq {
+  background-color: map-get(c.$theme-colors, "tertiary");
+  color: #fff;
+  padding-top: 5%;
+  font-family: c.$open-sans;
+
+  h2 {
+    font-family: c.$raleway;
+    font-weight: bold;
+    margin-bottom: 5%;
+  }
+
+  .accordion {
+    .accordion-item {
+      margin: 15px auto;
+      border: none;
+
+      button {
+        font-weight: bold;
+      }
+    } 
+  }
+}
