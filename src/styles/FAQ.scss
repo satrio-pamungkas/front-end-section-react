@@ -1,0 +1,31 @@
+@import './commons.scss';
+
+$accordion-color: #fff;
+$accordion-bg: $bg-color;
+$component-active-bg: $primary;
+$accordion-button-active-bg: $primary;
+$accordion-button-active-color: $bg-color;
+
+.faq {
+  background-color: $bg-color;
+  color: #fff;
+  padding-top: 5%;
+  font-family: $open-sans;
+
+  h2 {
+    font-family: $raleway;
+    font-weight: bold;
+    margin-bottom: 5%;
+  }
+
+  .accordion {
+    .accordion-item {
+      margin: 15px auto;
+      border: none;
+
+      button {
+        font-weight: bold;
+      }
+    } 
+  }
+}
