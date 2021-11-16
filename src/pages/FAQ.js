@@ -30,50 +30,51 @@ export const FAQ = () => {
   ];
 
   return (
-    <div className="faq">
-      <div className="container">
-        <h2 className="text-center">F.A.Q Seputar Section</h2>
-
-        <div className="row justify-content-center">
-          <div className="col-md-9 col-xs-12 mb-4">
-            <div className="accordion accordion-flush" id="accordionFaq">
-              {listFaqs.map((faq, i) => (
-                <div className="accordion-item" key={i}>
-                  <h2
-                    className="accordion-header"
-                    id={`heading-${i.toString()}`}
-                  >
-                    <button
-                      className={`accordion-button ${
-                        i !== 0 ? 'collapsed' : ''
-                      }`}
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target={`#collapse-${i.toString()}`}
-                      aria-expanded="true"
-                      aria-controls={`collapse-${i.toString()}`}
-                    >
-                      {faq.question}
-                    </button>
-                  </h2>
-                  <div
-                    id={`collapse-${i.toString()}`}
-                    className={`accordion-collapse collapse ${
-                      i === 0 ? 'show' : ''
-                    } `}
-                    aria-labelledby={`heading-${i.toString()}`}
-                    data-bs-parent="#accordionFaq"
-                  >
-                    <div className="accordion-body">
-                      {parse(faq.answer)}
+      <>
+        <div className="faq">
+            <div className="container">
+                <h2 className="text-center">F.A.Q Seputar Section</h2>
+                <div className="row justify-content-center">
+                    <div className="col-md-9 col-xs-12 mb-4">
+                        <div className="accordion accordion-flush" id="accordionFaq">
+                        {listFaqs.map((faq, i) => (
+                            <div className="accordion-item" key={i}>
+                            <h2
+                                className="accordion-header"
+                                id={`heading-${i.toString()}`}
+                            >
+                                <button
+                                className={`accordion-button ${
+                                    i !== 0 ? 'collapsed' : ''
+                                }`}
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target={`#collapse-${i.toString()}`}
+                                aria-expanded="true"
+                                aria-controls={`collapse-${i.toString()}`}
+                                >
+                                {faq.question}
+                                </button>
+                            </h2>
+                            <div
+                                id={`collapse-${i.toString()}`}
+                                className={`accordion-collapse collapse ${
+                                i === 0 ? 'show' : ''
+                                } `}
+                                aria-labelledby={`heading-${i.toString()}`}
+                                data-bs-parent="#accordionFaq"
+                            >
+                                <div className="accordion-body">
+                                {parse(faq.answer)}
+                                </div>
+                            </div>
+                            </div>
+                        ))}
+                        </div>
                     </div>
-                  </div>
                 </div>
-              ))}
             </div>
-          </div>
         </div>
-      </div>
-    </div>
+    </>
   );
 };
