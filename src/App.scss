@@ -1,4 +1,3 @@
-@use '../node_modules/bootstrap/scss/bootstrap';
-@use './styles/beranda';
-@use './styles/faq';
-
+@import './styles/beranda';
+@import './styles/faq';
+@import '../node_modules/bootstrap/scss/bootstrap';
