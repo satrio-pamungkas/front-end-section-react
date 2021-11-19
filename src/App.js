@@ -8,6 +8,8 @@ import { Register } from './pages/Register';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import ProtectedRoute from './services/ProtectedRoute';
+import { JoinGroup } from './pages/JoinGroup';
 
 library.add(fab, faEnvelope, faYoutube, faInstagram);
 
@@ -16,9 +18,17 @@ export const App = () => {
         <BrowserRouter>
             <Navbar/>
                 <Routes>
-                    <Route path="/" element={<Beranda/>}/>
                     <Route path="/faq" element={<FAQ/>}/>
                     <Route path="/daftar" element={<Register/>}/>
+                    <Route 
+                        path="/bergabung" 
+                        element={
+                            <ProtectedRoute>
+                                <JoinGroup/>
+                            </ProtectedRoute>
+                        }
+                    />
+                    <Route path="/" element={<Beranda/>}/>
                 </Routes>
             <Footer/>
         </BrowserRouter>
