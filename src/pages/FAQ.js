@@ -25,7 +25,14 @@ export const FAQ = () => {
       of this with custom CSS or overriding our default variables.
       It's also worth noting that just about any HTML can go
       within the <code>.accordion-body</code>, though the
-      transition does limit overflow.`,
+      transition does limit overflow.
+      <ul>
+        <li>An item</li>
+        <li>A second item</li>
+        <li>A third item</li>
+        <li>A fourth item</li>
+        <li>And a fifth one</li>
+      </ul>`,
     },
   ];
 
