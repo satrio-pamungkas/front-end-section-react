@@ -24,7 +24,6 @@ export const Form = () => {
     const {
         register,
         handleSubmit,
-        reset,
         formState: { errors }
     } = useForm({
         resolver: yupResolver(validationSchema)
@@ -81,7 +80,7 @@ export const Form = () => {
             <div className="form-floating">
                 <input 
                     name="noWhatsapp"
-                    type="number"
+                    type="text"
                     className={`form-control ${errors.noWhatsapp ? 'is-invalid' : ''}`}
                     id="floatingInputInvalid" 
                     placeholder="Nomor WhatsApp" 
@@ -134,7 +133,7 @@ export const Form = () => {
                     {errors.domisili?.message}
                 </div>
             </div>
-            <button type="submit" className="btn btn-warning">Daftar</button>
+            <button type="submit" className="btn btn-warning">DAFTAR</button>
         </form>
 
     );

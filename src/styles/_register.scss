@@ -6,6 +6,20 @@ $form-floating-label-transform:   scale(.8) translateY(-.5rem) translateX(.15rem
     background-color: map-get(c.$theme-colors, "tertiary");
 
     .container.register {
+        .head {
+            h2 {
+                font-family: c.$open-sans;
+                font-weight: 800;
+                color: map-get(c.$theme-colors , "primary");
+            }
+
+            h5 {
+                font-family: c.$open-sans;
+                font-size: 16px;
+                font-weight: 400;
+                color: white;
+            }
+        }
         .form-floating {
             margin-bottom: 20px;
 
@@ -39,11 +53,6 @@ $form-floating-label-transform:   scale(.8) translateY(-.5rem) translateX(.15rem
                 background-color: map-get(c.$theme-colors, "quinary");
             }
 
-            .form-control[type=number]::-webkit-inner-spin-button,
-            .form-control[type=number]::-webkit-outer-spin-button { 
-                -webkit-appearance: none;
-            }
-
             label {
                 margin-top: -2px;
                 font-family: c.$open-sans;
@@ -68,6 +77,16 @@ $form-floating-label-transform:   scale(.8) translateY(-.5rem) translateX(.15rem
                 font-size: 15px;
                 color: white;
             }
+        }
+
+        button {
+            margin-top: 15px;
+            border-radius: 20px;
+            width: 150px;
+            height: 40px;
+            font-family: c.$raleway;
+            font-size: 14px;
+            font-weight: 700;
         }
     }
 }
