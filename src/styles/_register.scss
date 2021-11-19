@@ -1,1 +1,43 @@
 @use './commons'as c;
+
+.register {
+    background-color: map-get(c.$theme-colors, "tertiary");
+
+    .container.register {
+        .form-group.name {
+            input {
+                border-radius: 15px;
+                border: 1.5px solid white;
+                background-color: map-get(c.$theme-colors, "quinary") !important;
+                font-family: c.$raleway;
+                font-weight: 600;
+                color: white;
+            }
+
+            input[type=text]:focus {
+                border: 1px solid map-get(c.$theme-colors, "octonary");
+                background-color: map-get(c.$theme-colors, "quinary") !important;
+            }
+        }
+
+        .form-floating.email {
+            input {
+                border-radius: 15px;
+                border: 1.5px solid white;
+                background-color: map-get(c.$theme-colors, "quinary") !important;
+                font-family: c.$raleway;
+                font-weight: 600;
+                color: white;
+            }
+
+            input[type=email]:focus {
+                border: 1px solid map-get(c.$theme-colors, "octonary") !important;
+                background-color: map-get(c.$theme-colors, "quinary") !important;
+            }
+
+            label {
+                color: white;
+            }
+        }
+    }
+}
