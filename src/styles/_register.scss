@@ -1,43 +1,57 @@
 @use './commons'as c;
 
+$form-floating-label-transform:   scale(.8) translateY(-.5rem) translateX(.15rem);
+
 .register {
     background-color: map-get(c.$theme-colors, "tertiary");
 
     .container.register {
-        .form-group.name {
-            input {
+        .form-floating {
+            margin-bottom: 20px;
+
+            .form-control {
+                height: 50px;
                 border-radius: 15px;
-                border: 1.5px solid white;
-                background-color: map-get(c.$theme-colors, "quinary") !important;
-                font-family: c.$raleway;
-                font-weight: 600;
+                border: 1px solid rgb(182, 182, 182);
+                background-color: map-get(c.$theme-colors, "quinary");
+                font-family: c.$open-sans;
+                font-weight: 500;
+                font-size: 15px;
                 color: white;
             }
 
-            input[type=text]:focus {
+            .form-control.is-invalid {
+                border: 1px solid red;
+            }
+
+            .form-control[type=email]:focus {
                 border: 1px solid map-get(c.$theme-colors, "octonary");
-                background-color: map-get(c.$theme-colors, "quinary") !important;
-            }
-        }
-
-        .form-floating.email {
-            input {
-                border-radius: 15px;
-                border: 1.5px solid white;
-                background-color: map-get(c.$theme-colors, "quinary") !important;
-                font-family: c.$raleway;
-                font-weight: 600;
-                color: white;
+                background-color: map-get(c.$theme-colors, "quinary");
             }
 
-            input[type=email]:focus {
-                border: 1px solid map-get(c.$theme-colors, "octonary") !important;
-                background-color: map-get(c.$theme-colors, "quinary") !important;
+            .form-control[type=text]:focus {
+                border: 1px solid map-get(c.$theme-colors, "octonary");
+                background-color: map-get(c.$theme-colors, "quinary");
+            }
+
+            .form-control[type=number]:focus {
+                border: 1px solid map-get(c.$theme-colors, "octonary");
+                background-color: map-get(c.$theme-colors, "quinary");
+            }
+
+            .form-control[type=number]::-webkit-inner-spin-button,
+            .form-control[type=number]::-webkit-outer-spin-button { 
+                -webkit-appearance: none;
             }
 
             label {
-                color: white;
+                margin-top: -2px;
+                font-family: c.$open-sans;
+                font-size: 15px;
+                font-weight: 500;
+                color: rgb(182, 182, 182);
             }
+
         }
     }
 }
