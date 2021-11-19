@@ -53,5 +53,21 @@ $form-floating-label-transform:   scale(.8) translateY(-.5rem) translateX(.15rem
             }
 
         }
+
+        .form-group {
+            margin-bottom: 20px;
+            
+            .form-select {
+                height: 50px;
+                border-radius: 15px;
+                border: 1px solid rgb(182, 182, 182);
+                background-color: map-get(c.$theme-colors, "quinary");
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23d1d1d1' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+                font-family: c.$open-sans;
+                font-weight: 500;
+                font-size: 15px;
+                color: white;
+            }
+        }
     }
 }
