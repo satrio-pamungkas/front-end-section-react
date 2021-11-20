@@ -1,6 +1,6 @@
 @use './commons'as c;
 
-$card-bg: map-get(c.$theme-colors , "quaternary" );
+$card-bg: map-get(c.$theme-colors, "quaternary");
 
 .beranda {
 
@@ -51,7 +51,6 @@ $card-bg: map-get(c.$theme-colors , "quaternary" );
                 height: 40px;
                 width: 175px;
                 background-color: map-get(c.$theme-colors, "primary");
-                margin-right: 10px;
             }
 
             .daftar:hover {
@@ -67,7 +66,6 @@ $card-bg: map-get(c.$theme-colors , "quaternary" );
                 height: 40px;
                 width: 175px;
                 background-color: map-get(c.$theme-colors, "tertiary");
-                margin-left: 10px;
                 border-color: map-get(c.$theme-colors, "primary");
             }
 
@@ -208,22 +206,23 @@ $card-bg: map-get(c.$theme-colors , "quaternary" );
         padding-top: 10%;
         font-family: c.$open-sans;
 
-        h2, h4 {
+        h2,
+        h4 {
             font-weight: bold;
             font-family: c.$raleway;
         }
-        
+
         .narahubung {
             list-style: none;
 
             li {
                 margin-bottom: 15px;
-                
+
                 a {
                     text-decoration: none;
                     color: #fff;
                 }
-                
+
                 .icon {
                     width: 35px;
                     height: 35px;
@@ -342,6 +341,79 @@ $card-bg: map-get(c.$theme-colors , "quaternary" );
 
                 .benefit {
                     margin-top: -20%;
+                }
+            }
+        }
+    }
+
+    #timeline {
+        background-color: map-get(c.$theme-colors, "tertiary");
+
+        h4 {
+            color: map-get(c.$theme-colors, "primary");
+        }
+
+        .container {
+            .one {
+                margin-left: 50%;
+            }
+
+            .two {
+                margin-left: -50%;
+                margin-right: -50%;
+            }
+
+            .three {
+                margin-right: 50%;
+            }
+
+            @media screen and (min-width: 1400px) {
+                .position {
+                    margin-bottom: -7%;
+                }
+            }
+
+            @media screen and (min-width: 1200px) and (max-width: 1399px) {
+                .position {
+                    margin-bottom: -8%;
+                }
+            }
+
+            @media screen and (min-width: 1001px) and (max-width: 1199px) {
+                .position {
+                    margin-bottom: -9.5%;
+                }
+            }
+
+            @media screen and (max-width: 1000px) {
+
+                .position,
+                .line-timeline {
+                    display: none;
+                }
+            }
+
+
+
+            .row {
+                .line-timeline {
+                    margin-bottom: 5%;
+                    border-bottom: 4px solid map-get(c.$theme-colors, "primary");
+                    border-radius: 4px;
+                }
+
+                .line {
+                    border-bottom: 4px solid map-get(c.$theme-colors, "primary");
+                    border-radius: 4px;
+                }
+
+                .circle {
+                    margin: auto;
+                    margin-bottom: 20px;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background-color: map-get(c.$theme-colors, "primary");
                 }
             }
         }
