@@ -7,11 +7,12 @@ import * as Yup from 'yup';
 export const Form = () => {
 
     const [tokenKey, setTokenKey] = useState();
+    const [problem, setProblem] = useState(null);
     const [buttonHide, setButtonHide] = useState(true);
     const [redirect, setRedirect] = useState(false);
 
     const validationSchema = Yup.object().shape({
-        name: Yup.string()
+        nama: Yup.string()
             .required('Nama wajib diisi'),
         jenisKelamin: Yup.string()
             .required('Jenis kelamin wajib diisi'),
@@ -36,11 +37,32 @@ export const Form = () => {
         resolver: yupResolver(validationSchema)
     });
 
-    const onSubmit = data => {
-        console.log(JSON.stringify(data, null, 2));
+    const onSubmit = formData => {
+        console.log(tokenKey);
+        formData.token = tokenKey;
+
+        fetch('https://api.sectionrpl.com/daftar', {
+            method: 'POST',
+            body: JSON.stringify(formData),
+            headers: { 'Content-Type': 'application/json' },
+        })
+        .then((response) => {
+            if (!response.ok) {
+                throw Error(response.statusText);
+            }
+            return response;
+        })
+        .then((data) => {
+            setProblem(false);
+            setRedirect(true);
+        })
+        .catch((err) => {
+            console.log(err);
+            setProblem(true);
+        })
+
+        window.grecaptcha.reset();
         setButtonHide(true);
-        sessionStorage.setItem('submitted', 'true');
-        setRedirect(true);
     }
 
     const handleToken = token => {
@@ -55,14 +77,14 @@ export const Form = () => {
                     <input 
                         name="name"
                         type="text"
-                        className={`form-control ${errors.name ? 'is-invalid' : ''}`}
+                        className={`form-control ${errors.nama ? 'is-invalid' : ''}`}
                         id="floatingInputInvalid" 
                         placeholder="Nama Lengkap" 
-                        {...register('name')}
+                        {...register('nama')}
                     />
                     <label htmlFor="floatingInputInvalid">Nama Lengkap</label>
                     <div className="invalid-feedback">
-                        {errors.name?.message}
+                        {errors.nama?.message}
                     </div>
                 </div>
                 <div className="form-group">
@@ -154,6 +176,11 @@ export const Form = () => {
                     onChange={handleToken}
                     theme="dark"
                 />
+                {problem &&
+                    <div className="alert alert-danger" role="alert">
+                        Gagal mendaftar, silakan ulangi
+                    </div>
+                }
                 <button 
                     disabled={buttonHide}
                     type="submit" 
@@ -162,7 +189,7 @@ export const Form = () => {
                     DAFTAR
                 </button>
             </form>
-            {redirect && (window.location.pathname = "/bergabung") }
+            {/* {redirect && (window.location.pathname = "/bergabung") } */}
         </>
     );
 }
