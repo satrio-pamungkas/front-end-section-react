@@ -330,9 +330,19 @@ $card-bg: map-get(c.$theme-colors, "quaternary");
 
         h4 {
             color: map-get(c.$theme-colors, "primary");
+            font-family: c.$open-sans;
+            font-size: 800 !important;
         }
 
         .container {
+            .fw-bolder.mb-3 {
+                font-family: c.$open-sans;
+            }
+
+            .m-0 {
+                font-family: c.$open-sans;
+            }
+
             .row {
                 .line {
                     border-bottom: 4px solid white;

@@ -6,11 +6,11 @@ export const Acara = () => {
                 <div className="row mb-4">
                     <div className="col-10 m-auto">
                         <h2 className="fw-bolder mb-3">Software Engineering Creation Vol. 2.0</h2>
-                        <p className="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore et delectus magni impedit pariatur necessitatibus, consectetur, voluptatum similique minus laborum consequuntur. In aliquam praesentium, culpa suscipit at tempore debitis. Quas minima voluptatibus odit perferendis suscipit recusandae. Voluptatibus porro, accusantium, voluptatem incidunt, rerum modi earum fugit nostrum impedit sapiente iste odio quod culpa. Facere, optio commodi ratione architecto consequuntur eaque vitae, assumenda, ipsam dignissimos ab cumque debitis dolores. Nihil vitae quod consequatur ea reprehenderit dolorem explicabo ducimus cum rem accusamus exercitationem, sequi doloribus, cupiditate suscipit sed, quidem odit quam iure nisi dolorum corporis impedit. Omnis vero, voluptate labore explicabo odit tempore.</p>
+                        <p className="m-0">Section Vol.2 singkatan dari Software Engineering Creation Volume 2 merupakan <i>event</i> tahunan dari Himpunan Mahasiswa Rekayasa Perangkat Lunak di Universitas Pendidikan Indonesia. <i>Event</i> ini diadakan setahun sekali dimana kali ini merupakan tahun kedua. Tema yang diangkat untuk tahun ini yaitu tentang <strong><i>"The Future of Finance is FinTech"</i></strong>.</p>
                     </div>
                 </div>
                 <div className="row mb-4">
-                    <h4>"The Future of Finance is Fintech"</h4>
+                    <h4><strong>"The Future of Finance is Fintech"</strong></h4>
                 </div>
                 <div className="row mb-5">
                     <div class="col-4 line m-auto"></div>

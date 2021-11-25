@@ -65,6 +65,7 @@ $theme-colors: ("primary": #FFC700,
         color: map-get($theme-colors, "primary");
         margin-top: 0;
         margin-bottom: 12px;
+        font-family: $raleway;
         font-weight: bold;
         font-size: 16px;
     }
@@ -73,6 +74,7 @@ $theme-colors: ("primary": #FFC700,
         padding: 0;
         list-style: none;
         line-height: 1.6;
+        font-family: $raleway;
         font-size: 14px;
         margin-bottom: 0;
 

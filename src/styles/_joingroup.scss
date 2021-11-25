@@ -3,4 +3,85 @@
 .join-group {
     background-color: map-get(c.$theme-colors, "tertiary");
 
+    .container.join-group {
+        .card {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            background-color: map-get(c.$theme-colors, "septenary");
+            border-radius: 15px;
+
+            h1 {
+                font-family: c.$raleway;
+                font-size: 34px;
+                font-weight: 700;
+                color: white;
+            }
+
+            h4 {
+                font-family: c.$raleway;
+                font-size: 18px;
+                font-weight: 500;
+                color: white;
+            }
+
+            img {
+                width: 300px;
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+
+            h5 {
+                font-family: c.$raleway;
+                font-size: 16px;
+                font-weight: 500;
+                color: white;
+                margin-top: 30px;
+                margin-bottom: 20px;
+            }
+
+            button {
+                text-align: center;
+                border-radius: 20px;
+                width: 325px;
+                height: 40px;
+                font-family: c.$raleway;
+                font-size: 18px;
+                font-weight: 700;
+                margin-bottom: 50px;
+                background-color: map-get(c.$theme-colors, "primary");
+            }
+
+            button:hover {
+                background-color: map-get(c.$theme-colors, "nonary");
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .join-group {
+        .container.join-group {
+            .card {
+                h1 {
+                    font-size: 30px;
+                }
+
+                h4 {
+                    font-size: 15px;
+                }
+
+                img {
+                    width: 250px;
+                }
+
+                button {
+                    font-size: 14px;
+                    width: 250px;
+                }
+            }
+        }
+    }
 }

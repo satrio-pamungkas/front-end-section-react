@@ -5,9 +5,9 @@ export const JoinButton = () => {
         <>
             {LinkGroup().map((item) => (
             <a href={item.link}>
-                <div className="btn btn-warning">
-                    Bergabung Grup WhatsApp
-                </div>
+                <button className="btn btn-warning">
+                    BERGABUNG GRUP WHATSAPP
+                </button>
             </a>
             ))}
         </>
