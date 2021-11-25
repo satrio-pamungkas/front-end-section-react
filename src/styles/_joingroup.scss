@@ -1,0 +1,6 @@
+@use './commons'as c;
+
+.join-group {
+    background-color: map-get(c.$theme-colors, "tertiary");
+
+}

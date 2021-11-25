@@ -55,6 +55,7 @@ export const Form = () => {
         .then((data) => {
             setProblem(false);
             setRedirect(true);
+            sessionStorage.setItem('submitted','true');
         })
         .catch((err) => {
             console.log(err);
@@ -189,7 +190,7 @@ export const Form = () => {
                     DAFTAR
                 </button>
             </form>
-            {/* {redirect && (window.location.pathname = "/bergabung") } */}
+            {redirect && (window.location.pathname = "/bergabung") }
         </>
     );
 }

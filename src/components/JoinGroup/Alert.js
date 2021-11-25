@@ -1,7 +1,7 @@
 export const Alert = () => {
     return (
-        <div className="alert alert-warning" role="alert">
-            Bagian ini dalam tahap pengembangan
+        <div>
+            <h1>WORK</h1>
         </div>
     )
 }

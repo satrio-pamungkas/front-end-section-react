@@ -1,7 +1,11 @@
-import { Alert } from "../components/JoinGroup/Alert";
+import { JoinButton } from "../components/JoinGroup/JoinButton";
 
 export const JoinGroup = () => {
     return (
-        <Alert/>
+        <div className="join-group">
+            <div className="container join-group">
+                <JoinButton/>
+            </div>
+        </div>
     );
 }
