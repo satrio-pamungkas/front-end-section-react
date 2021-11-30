@@ -19,7 +19,7 @@ export const Timeline = () => {
                     </div>
                     <div className="col-lg-4 col-md-12 col-sm-12 my-5">
                         <h5 className="">Section Talks #2</h5>
-                        <p>11 Desember 2021</p>
+                        <p>5 Desember 2021</p>
                         <div className="position two">
                         <div className="col-8 line-timeline m-auto"></div>
                         </div>
