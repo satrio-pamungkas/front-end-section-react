@@ -7,12 +7,16 @@ export const Register = () => {
         <div className="register">
             <div className="container register">
                 <div className="row">
-                    <div className="col-1 col-sm-2 col-lg-3"></div>
-                    <div className="col-10 col-sm-8 col-lg-6">
-                        <Heading/>
-                        <Form/>
+                    <div className="col-sm-0 col-md-1 col-lg-2"></div>
+                    <div className="col-sm-12 col-md-10 col-lg-8">
+                        <div class="card">
+                            <div class="card-body">
+                                <Heading/>
+                                <Form/>
+                            </div>
+                        </div>
                     </div>
-                    <div className="col-1 col-sm-2 col-lg-3"></div>
+                    <div className="col-sm-0 col-md-1 col-lg-2"></div>
                 </div>
             </div>
         </div>

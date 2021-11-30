@@ -1,18 +1,28 @@
 import React from 'react';
 
+import Pemateri1 from "../../assets/img/RizqiSyam.png";
+import Pemateri2 from "../../assets/img/IdaFarida.png";
+import Pemateri3 from "../../assets/img/Achmad.png";
+
 export const Speakers = () => {
   const speakers = [
-        {
-        name: 'Jhon Titor',
-        job: 'Ketua Advokasi',
+        {   
+            photo: Pemateri1,
+            name: 'Rizqi Syam, BA., CFP®',
+            job: 'Financial Planner Finansialku',
+            topic: 'Introduction to Fintech'
         },
         {
-        name: 'Jhon Titor',
-        job: 'Ketua Advokasi',
+            photo: Pemateri2,
+            name: 'Dr. Ida Farida Adi Prawira, SE., M.Si',
+            job: 'Dosen Program Studi Magister Ilmu Akuntansi FPEB UPI dan Direktur Keuangan BPPD Sumedang',
+            topic: 'The Future of Fintech'
         },
         {
-        name: 'Jhon Titor',
-        job: 'Ketua Advokasi',
+            photo: Pemateri3,
+            name: 'Achmad Dirgantara S.IP., MT',
+            job: 'Head of IDX Incubator Jawa Barat',
+            topic: 'Building a Sustainable Startup Fintech'
         },
     ];
 
@@ -23,10 +33,10 @@ export const Speakers = () => {
                     <div className="col header">
                     <h2 className="mb-3">Mengenal Pembicara pada SECTION</h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-                        sint, reiciendis mollitia at, a dolore odio maiores, ipsam magnam
-                        delectus error nulla quos fugiat? Aliquid asperiores eaque possimus
-                        porro a.
+                        Kegiatan <strong>SECTION</strong> tahun ini akan menghadirkan
+                        narasumber-narasumber hebat yang berasal dari berbagai latar 
+                        belakang seperti perusahaan <i>startup</i>, akademisi, lembaga sipil, 
+                        hingga bursa efek.
                     </p>
                     </div>
                 </div>
@@ -36,14 +46,14 @@ export const Speakers = () => {
                         <div className="col-md-4" key={i}>
                             <h4>Section Talks #{i + 1}</h4>
                             <img
-                                src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                                src={speaker.photo}
                                 alt="Speaker 1"
                                 className="rounded-circle"
                             />
                             <h4 className="speaker-name">{speaker.name}</h4>
                             <p>
                                 <span>{speaker.job}</span>
-                                <b className="d-block mt-2">HIMARPL</b>
+                                <b className="d-block mt-2">{speaker.topic}</b>
                             </p>
                         </div>
                     ))}

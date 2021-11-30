@@ -6,14 +6,25 @@ $form-floating-label-transform:   scale(.8) translateY(-.5rem) translateX(.15rem
     background-color: map-get(c.$theme-colors, "tertiary");
 
     .container.register {
+        .card {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            background-color: map-get(c.$theme-colors, "septenary");
+            border-radius: 15px;
+        }
+        
         .head {
             h2 {
+                justify-content: center;
+                text-align: center;
                 font-family: c.$open-sans;
                 font-weight: 800;
                 color: map-get(c.$theme-colors , "primary");
             }
 
             h5 {
+                justify-content: center;
+                text-align: center;
                 font-family: c.$open-sans;
                 font-size: 16px;
                 font-weight: 400;
