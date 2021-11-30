@@ -18,13 +18,13 @@ export const Partnership = () => {
                         </div> */}
                     </div>
                     <div className="col-lg-4 col-md-12 col-sm-12">
-                        <div className="card">
-                            <div className="card-body">
-                                <a href="https://www.finansialku.com/" target="_blank" rel="noopener noreferrer">
-                                    <img src={Logo} alt="Logo Finansialku" width="85%"/>
-                                </a>
+                        <a href="https://www.finansialku.com/" target="_blank" rel="noopener noreferrer">
+                            <div className="card">
+                                <div id="sponsorship" className="card-body">
+                                        <img src={Logo} alt="Logo Finansialku" width="85%"/>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div className="col-lg-4 col-md-12 col-sm-12">
                         {/* <div className="card">

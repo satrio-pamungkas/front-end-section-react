@@ -10,12 +10,20 @@ $accordion-button-active-color: map-get(c.$theme-colors, "tertiary");
     background-color: map-get(c.$theme-colors, "tertiary");
     color: #fff;
     padding-top: 5%;
+    padding-bottom: 40px;
     font-family: c.$open-sans;
+
+    .card {
+        background-color: map-get(c.$theme-colors, "septenary");
+        border-radius: 15px;
+        margin-bottom: 40px;
+    }
 
     h2 {
         font-family: c.$raleway;
         font-weight: bold;
-        margin-bottom: 5%;
+        margin-top: 20px;
+        margin-bottom: 15px;
     }
 
     .accordion {
