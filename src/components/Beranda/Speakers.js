@@ -10,7 +10,7 @@ export const Speakers = () => {
             photo: Pemateri1,
             name: 'Rizqi Syam, BA., CFP®',
             job: 'Financial Planner Finansialku',
-            topic: 'Introduction to Fintech'
+            topic: 'Basic Financial Planning'
         },
         {
             photo: Pemateri2,

@@ -10,6 +10,7 @@ export const Form = () => {
     const [problem, setProblem] = useState(null);
     const [buttonHide, setButtonHide] = useState(true);
     const [redirect, setRedirect] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     const validationSchema = Yup.object().shape({
         nama: Yup.string()
@@ -40,6 +41,7 @@ export const Form = () => {
     const onSubmit = formData => {
         console.log(tokenKey);
         formData.token = tokenKey;
+        setLoading(true);
 
         fetch('https://api.sectionrpl.com/daftar', {
             method: 'POST',
@@ -60,6 +62,7 @@ export const Form = () => {
         .catch((err) => {
             console.log(err);
             setProblem(true);
+            setLoading(false);
         })
 
         window.grecaptcha.reset();
@@ -182,13 +185,23 @@ export const Form = () => {
                         Gagal mendaftar, silakan ulangi
                     </div>
                 }
-                <button 
-                    disabled={buttonHide}
-                    type="submit" 
-                    className="btn btn-warning" 
-                >
-                    DAFTAR
-                </button>
+                <div class="d-flex align-items-center">
+                    <strong>Loading...</strong>
+                    
+                </div>
+                <span>
+                    <button 
+                        disabled={buttonHide}
+                        type="submit" 
+                        className="btn btn-warning" 
+                    >
+                        DAFTAR
+                    </button>
+                    {loading && 
+                    <div class="spinner-border text-warning" role="status" aria-hidden="true"></div>
+                    }
+                </span>
+
             </form>
             {redirect && (window.location.pathname = "/bergabung") }
         </>

@@ -15,7 +15,7 @@ export const Timeline = () => {
                         <div className="col-12 line-timeline m-auto"></div>
                         </div>
                         <div className="circle mt-3"></div>
-                        <p>Introduction to Fintech</p>
+                        <p>Basic Financial Planning</p>
                     </div>
                     <div className="col-lg-4 col-md-12 col-sm-12 my-5">
                         <h5 className="">Section Talks #2</h5>

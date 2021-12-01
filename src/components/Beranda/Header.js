@@ -4,8 +4,8 @@ export const Header = () => {
   return (
     <div id="header">
         <div className="row">
-            <div className="col-3"></div>
-            <div className="col-6">
+            <div className="col-xs-2 col-sm-3"></div>
+            <div className="col-xs-10 col-sm-6">
                 <img className="logo-section img-fluid" src={Logo} alt="LogoSection"></img>
                 <h1 className="title">
                     The Future of Finance is <strong>Fintech</strong>
@@ -18,7 +18,7 @@ export const Header = () => {
                     <button className="btn btn-warning agenda ms-lg-3 mt-2">LIHAT AGENDA</button>
                 </a>
             </div>
-            <div className="col-3"></div>
+            <div className="col-xs-2 col-sm-3"></div>
         </div>
     </div>
   );

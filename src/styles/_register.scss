@@ -92,13 +92,16 @@ $form-floating-label-transform:   scale(.8) translateY(-.5rem) translateX(.15rem
         }
 
         button {
-            margin-top: 15px;
             border-radius: 20px;
             width: 150px;
             height: 40px;
             font-family: c.$raleway;
             font-size: 14px;
             font-weight: 700;
+        }
+
+        .spinner-border.text-warning {
+            margin-left: 20px;
         }
 
         .alert.alert-danger {
