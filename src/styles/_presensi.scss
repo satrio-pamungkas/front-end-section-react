@@ -1,0 +1,141 @@
+@use './commons'as c;
+
+.presensi {
+    background-color: map-get(c.$theme-colors, "tertiary");
+
+    .container.presensi {
+        .card {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            background-color: map-get(c.$theme-colors, "septenary");
+            border-radius: 15px;
+        }
+
+        .head {
+            h2 {
+                margin-top: 20px;
+                justify-content: center;
+                text-align: center;
+                font-family: c.$open-sans;
+                font-weight: 800;
+                color: map-get(c.$theme-colors , "primary");
+            }
+
+            h5 {
+                justify-content: center;
+                text-align: center;
+                font-family: c.$open-sans;
+                font-size: 16px;
+                font-weight: 400;
+                color: white;
+            }
+
+            .presence-image {
+                width: 225px;
+                margin-bottom: 50px;
+            }
+
+            button {
+                font-family: c.$open-sans;
+                font-weight: 600;
+                margin-left: 10px;
+                margin-right: 10px;
+                margin-bottom: 10px;
+                border: 0px;
+            }
+
+            button:hover {
+                background-color: #c28938;
+            }
+        }
+
+        #subtitle {
+            text-align: center;
+            font-family: c.$raleway;
+            font-weight: 600;
+            font-size: 20px;
+            color: white;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+        
+        form {
+            padding-left: 25px;
+            padding-right: 25px;
+
+            .form-floating {
+                margin-bottom: 20px;
+
+                .form-control {
+                    height: 50px;
+                    border-radius: 15px;
+                    border: 1px solid rgb(182, 182, 182);
+                    background-color: map-get(c.$theme-colors, "quinary");
+                    font-family: c.$open-sans;
+                    font-weight: 500;
+                    font-size: 15px;
+                    color: white;
+                }
+
+                .form-control.is-invalid {
+                    border: 1px solid red;
+                }
+
+                .form-control[type=email]:focus {
+                    border: 1px solid map-get(c.$theme-colors, "octonary");
+                    background-color: map-get(c.$theme-colors, "quinary");
+                }
+
+                label {
+                    margin-top: -2px;
+                    font-family: c.$open-sans;
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: rgb(182, 182, 182);
+                }
+
+                small {
+                    font-family: c.$raleway;
+                    color: white;
+                }
+
+            }
+
+            button {
+                border-radius: 20px;
+                width: 150px;
+                height: 40px;
+                font-family: c.$raleway;
+                font-size: 14px;
+                font-weight: 700;
+            }
+
+            .spinner-border.text-warning {
+                margin-left: 20px;
+                vertical-align: -0.6em;
+            }
+
+            .alert.alert-danger {
+                margin-top: 20px;
+                font-family: c.$raleway;
+                font-weight: 500;
+                background-color: #e33232;
+                color: white;
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .presensi {
+        .container.presensi {
+            .head {
+                h2 {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+}

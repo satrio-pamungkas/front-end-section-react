@@ -9,8 +9,8 @@ export const Register = () => {
                 <div className="row">
                     <div className="col-sm-0 col-md-1 col-lg-2"></div>
                     <div className="col-sm-12 col-md-10 col-lg-8">
-                        <div class="card">
-                            <div class="card-body">
+                        <div className="card">
+                            <div className="card-body">
                                 <Heading/>
                                 <Form/>
                             </div>

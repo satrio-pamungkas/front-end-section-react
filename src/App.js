@@ -4,6 +4,7 @@ import { Navbar } from './components/common/Navbar';
 import { Footer } from './components/common/Footer';
 import { Beranda } from './pages/Beranda';
 import { FAQ } from './pages/FAQ';
+import { Presensi } from './pages/Presensi';
 import { Register } from './pages/Register';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
@@ -20,6 +21,7 @@ export const App = () => {
                 <Routes>
                     <Route path="/faq" element={<FAQ/>}/>
                     <Route path="/daftar" element={<Register/>}/>
+                    <Route path="/presensi" element={<Presensi/>}/>
                     <Route 
                         path="/bergabung" 
                         element={

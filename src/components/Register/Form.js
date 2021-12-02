@@ -39,7 +39,6 @@ export const Form = () => {
     });
 
     const onSubmit = formData => {
-        console.log(tokenKey);
         formData.token = tokenKey;
         setLoading(true);
 
@@ -185,10 +184,6 @@ export const Form = () => {
                         Gagal mendaftar, silakan ulangi
                     </div>
                 }
-                <div class="d-flex align-items-center">
-                    <strong>Loading...</strong>
-                    
-                </div>
                 <span>
                     <button 
                         disabled={buttonHide}
@@ -198,10 +193,9 @@ export const Form = () => {
                         DAFTAR
                     </button>
                     {loading && 
-                    <div class="spinner-border text-warning" role="status" aria-hidden="true"></div>
+                    <div className="spinner-border text-warning" role="status" aria-hidden="true"></div>
                     }
                 </span>
-
             </form>
             {redirect && (window.location.pathname = "/bergabung") }
         </>

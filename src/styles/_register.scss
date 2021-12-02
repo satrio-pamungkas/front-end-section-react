@@ -92,6 +92,7 @@ $form-floating-label-transform:   scale(.8) translateY(-.5rem) translateX(.15rem
         }
 
         button {
+            margin-top: 20px;
             border-radius: 20px;
             width: 150px;
             height: 40px;
@@ -101,6 +102,7 @@ $form-floating-label-transform:   scale(.8) translateY(-.5rem) translateX(.15rem
         }
 
         .spinner-border.text-warning {
+            vertical-align: -1.25em;
             margin-left: 20px;
         }
 
