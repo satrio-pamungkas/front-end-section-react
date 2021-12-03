@@ -7,7 +7,7 @@ export const LinkGroup = () => {
         fetch('https://api.sectionrpl.com/whatsapp')
             .then((response) => response.json())
             .then((data) => {
-                setLink(data.data.prodi);
+                setLink(data.data);
             })
             .catch((err) => {
                 console.log(err);

@@ -11,6 +11,12 @@
             border-radius: 15px;
         }
 
+        .card-body {
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+
         .head {
             h2 {
                 margin-top: 20px;
@@ -46,6 +52,15 @@
 
             button:hover {
                 background-color: #c28938;
+            }
+
+            #timeout {
+                font-family: c.$raleway;
+                font-size: 14px;
+                font-weight: 600;
+                color: map-get(c.$theme-colors, "primary");
+                background-color: map-get(c.$theme-colors, "septenary");
+                border-color: map-get(c.$theme-colors, "primary");
             }
         }
 
@@ -124,6 +139,16 @@
                 background-color: #e33232;
                 color: white;
             }
+
+            #success {
+                margin-top: 30px;
+                font-family: c.$open-sans;
+                font-size: 15px;
+                font-weight: 500;
+                color: map-get(c.$theme-colors, "primary");
+                background-color: map-get(c.$theme-colors, "septenary");
+                border-color: map-get(c.$theme-colors, "primary");
+            }
         }
     }
 }
@@ -131,6 +156,11 @@
 @media (max-width: 576px) {
     .presensi {
         .container.presensi {
+            .card-body {
+                margin-left: -10px;
+                margin-right: -10px;
+            }
+
             .head {
                 h2 {
                     font-size: 22px;

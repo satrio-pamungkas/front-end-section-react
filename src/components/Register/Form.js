@@ -56,6 +56,7 @@ export const Form = () => {
         .then((data) => {
             setProblem(false);
             setRedirect(true);
+            setLoading(false);
             sessionStorage.setItem('submitted','true');
         })
         .catch((err) => {

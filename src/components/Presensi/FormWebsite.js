@@ -1,8 +1,14 @@
+import { useState } from "react";
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 
 export const FormWebsite = () => {
+
+    const [loading, setLoading] = useState(false);
+    const [problem, setProblem] = useState(null);
+    const [nama, setNama] = useState();
+    const [show, setShow] = useState(false);
 
     const validationSchema = Yup.object().shape({
         email: Yup.string()
@@ -18,10 +24,38 @@ export const FormWebsite = () => {
         resolver: yupResolver(validationSchema)
     })
 
+    const onSubmit = formData => {
+        setLoading(true);
+
+        fetch('https://api.sectionrpl.com/absen-peserta-terdaftar', {
+            method: 'POST',
+            body: JSON.stringify(formData),
+            headers: { 'Content-Type':'application/json' },
+        })
+        .then((response) => {
+            if (!response.ok) {
+                throw Error(response.statusText);
+            }
+            return response.json();
+        })
+        .then((data) => {
+            setNama(data.data);
+            setShow(true);
+            setProblem(false);
+            setLoading(false);
+        })
+        .catch((err) => {
+            console.log(err.message);
+            setShow(false);
+            setProblem(true);
+            setLoading(false);
+        })
+    }
+
     return (
         <>
             <h4 id="subtitle">Presensi Khusus Pendaftar dari Website</h4>
-            <form className="form" onSubmit={handleSubmit()} noValidate="noValidate">
+            <form className="form" onSubmit={handleSubmit(onSubmit)} noValidate="noValidate">
                 <div className="form-floating">
                     <input 
                         name="email"
@@ -37,11 +71,17 @@ export const FormWebsite = () => {
                     </div>
                     <small>Masukan alamat surel (e-mail) yang digunakan saat mendaftar</small>
                 </div>
-                {/* {problem &&
+                {problem &&
                     <div className="alert alert-danger" role="alert">
-                        Gagal mengisi form, pastikan telah mengisi email yang digunakan saat mendaftar. Silakan ulangi
+                        Gagal menyimpan presensi, pastikan telah mengisi email yang digunakan saat mendaftar. Silakan ulangi
                     </div>
-                } */}
+                }
+                {show && 
+                    <div id="success" className="alert alert-warning" role="alert">
+                        <strong>Berhasil tersimpan !</strong> <br/> <br/> 
+                        Terima Kasih <strong>{nama}</strong> telah hadir dalam kegiatan Section Talks #1, sampai jumpa di kegiatan Section Talks #2 besok hari
+                    </div>
+                }
                 <span>
                     <button 
                         type="submit" 
@@ -49,7 +89,9 @@ export const FormWebsite = () => {
                     >
                         SUBMIT
                     </button>
+                    {loading && 
                     <div className="spinner-border text-warning" role="status" aria-hidden="true"></div>
+                    }
                 </span>
             </form>
         </>
