@@ -39,7 +39,6 @@ export const FormSejutaCita = () => {
             return response.json();
         })
         .then((data) => {
-            console.log(data.data);
             setNama(data.data);
             setShow(true);
             setProblem(false);
