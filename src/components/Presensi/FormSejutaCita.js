@@ -9,6 +9,7 @@ export const FormSejutaCita = () => {
     const [problem, setProblem] = useState(null);
     const [nama, setNama] = useState();
     const [show, setShow] = useState(false);
+    const [message, setMessage] = useState([]);
 
     const validationSchema = Yup.object().shape({
         email: Yup.string()
@@ -34,7 +35,7 @@ export const FormSejutaCita = () => {
         })
         .then((response) => {
             if (!response.ok) {
-                throw Error(response.statusText);
+                return response.text().then(text => {throw new Error(text)})
             }
             return response.json();
         })
@@ -45,7 +46,7 @@ export const FormSejutaCita = () => {
             setLoading(false);
         })
         .catch((err) => {
-            console.log(err.message);
+            setMessage(JSON.parse(err.message).message);
             setShow(false);
             setProblem(true);
             setLoading(false);
@@ -73,13 +74,13 @@ export const FormSejutaCita = () => {
                 </div>
                 {problem &&
                     <div className="alert alert-danger" role="alert">
-                        Gagal mengirim presensi, pastikan telah mengisi email yang digunakan saat mendaftar. Silakan ulangi
+                        {message}
                     </div>
                 }
                 {show && 
                     <div id="success" className="alert alert-warning" role="alert">
                         <strong>Berhasil tersimpan !</strong> <br/> <br/> 
-                        Terima Kasih <strong>{nama}</strong> telah hadir dalam kegiatan Section Talks #1, sampai jumpa di kegiatan Section Talks #2 besok hari
+                        Terima Kasih <strong>{nama}</strong> telah hadir dalam kegiatan Section Talks #2, sampai jumpa di kegiatan Section Talks #3 pekan depan
                     </div>
                 }
                 <span>

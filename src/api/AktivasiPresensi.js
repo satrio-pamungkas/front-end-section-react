@@ -8,7 +8,6 @@ export const AktivasiPresensi = () => {
             .then((response) => response.json())
             .then((data) => {
                 setShow(data.data[0].status);
-                console.log(data.data[0].status);
             })
             .catch((err) => {
                 console.log(err);
