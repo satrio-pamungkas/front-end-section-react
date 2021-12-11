@@ -42,8 +42,8 @@ export const Presensi = () => {
                             <div className="card">
                                 <div className="card-body">
                                     <div className="head">
-                                        <h2>Presensi SECTION Talks #2</h2>
-                                        <h5>Presensi <strong>Section Talks #2</strong> dengan judul <strong>The Future of Fintech</strong></h5>
+                                        <h2>Presensi SECTION Talks #3</h2>
+                                        <h5>Presensi <strong>Section Talks #3</strong> dengan judul <strong>Building a Sustainable Startup Fintech</strong></h5>
                                         <hr/>
                                         <div className="nav justify-content-center">
                                             <img className="presence-image" src={Presence} alt="Presence"/>

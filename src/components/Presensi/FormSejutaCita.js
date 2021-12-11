@@ -80,7 +80,7 @@ export const FormSejutaCita = () => {
                 {show && 
                     <div id="success" className="alert alert-warning" role="alert">
                         <strong>Berhasil tersimpan !</strong> <br/> <br/> 
-                        Terima Kasih <strong>{nama}</strong> telah hadir dalam kegiatan Section Talks #2, sampai jumpa di kegiatan Section Talks #3 pekan depan
+                        Terima Kasih <strong>{nama}</strong> telah hadir dalam kegiatan Section Talks #3, sampai jumpa di Section tahun depan
                     </div>
                 }
                 <span>

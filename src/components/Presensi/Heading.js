@@ -7,8 +7,8 @@ export const Heading = (props) => {
 
     return (
         <div className="head">
-            <h2>Presensi SECTION Talks #1</h2>
-            <h5>Presensi <strong>Section Talks #1</strong> dengan judul <strong>Basic Financial Planning</strong></h5>
+            <h2>Presensi SECTION Talks #3</h2>
+            <h5>Presensi <strong>Section Talks #3</strong> dengan judul <strong>Building a Sustainable Startup Fintech</strong></h5>
             <hr/>
             <div className="nav justify-content-center">
                 <img className="presence-image" src={Presence} alt="Presence"/>
