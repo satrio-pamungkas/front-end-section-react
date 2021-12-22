@@ -11,10 +11,10 @@ export const Header = () => {
                     The Future of Finance is <strong>Fintech</strong>
                 </h1>
                 <h1 className="subtitle-form">4 - 12 DESEMBER 2021</h1>
-                <a href="/daftar">
+                <a href="/front-end-section-react/daftar">
                     <button className="btn btn-warning daftar me-lg-3 mt-2">DAFTAR PESERTA</button>
                 </a>
-                <a href="/#acara">
+                <a href="/front-end-section-react/#acara">
                     <button className="btn btn-warning agenda ms-lg-3 mt-2">LIHAT AGENDA</button>
                 </a>
             </div>

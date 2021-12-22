@@ -16,14 +16,14 @@ library.add(fab, faEnvelope, faYoutube, faInstagram);
 
 export const App = () => {
     return (
-        <BrowserRouter basename={process.env.REACT_APP_PUBLIC_URL}>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Navbar/>
                 <Routes>
-                    <Route path="/faq" element={<FAQ/>}/>
-                    <Route path="/daftar" element={<Register/>}/>
-                    <Route path="/presensi" element={<Presensi/>}/>
+                    <Route path="/front-end-section-react/faq" element={<FAQ/>}/>
+                    <Route path="/front-end-section-react/daftar" element={<Register/>}/>
+                    <Route path="/front-end-section-react/presensi" element={<Presensi/>}/>
                     <Route 
-                        path="/bergabung" 
+                        path="/front-end-section-react/bergabung" 
                         element={
                             <ProtectedRoute>
                                 <JoinGroup/>

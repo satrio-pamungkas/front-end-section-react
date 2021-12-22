@@ -8,6 +8,11 @@
 
 ---
 
+## Perhatian ! Gunakan branch *stable* :speech_balloon: 
+Untuk menggunakan yang versi stabil dan minim bugs yang dapat digunakan local ataupun hosting lainnya (*production*), silakan gunakan branch [stable](https://github.com/satrio-pamungkas/front-end-section-react/tree/stable)
+
+---
+
 ## Apa isi repositori ini ? :speech_balloon: 
 Repositori ini berisi source code Website Section HIMARPL volume 2 bagian Front-End
 
