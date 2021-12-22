@@ -1,5 +1,6 @@
 # Front-End Website Section Vol 2 - 2021
 
+![Workflow Actions](https://github.com/satrio-pamungkas/front-end-section-react/actions/workflows/build-deploy.yml/badge.svg)
 ![Contributor](https://img.shields.io/github/contributors/satrio-pamungkas/front-end-section-react?color=blue)
 ![Pull](https://img.shields.io/bitbucket/pr-raw/satrio-pamungkas/front-end-section-react0?color=blue)
 ![Stars](https://img.shields.io/packagist/stars/satrio-pamungkas/front-end-section-react?color=blue)

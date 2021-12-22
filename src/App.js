@@ -16,7 +16,7 @@ library.add(fab, faEnvelope, faYoutube, faInstagram);
 
 export const App = () => {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Navbar/>
                 <Routes>
                     <Route path="/faq" element={<FAQ/>}/>
