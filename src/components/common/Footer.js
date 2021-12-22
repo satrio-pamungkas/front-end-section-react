@@ -11,9 +11,9 @@ export const Footer = () => {
                     <div className="col-sm-4 col-md-3 item">
                         <h3>KEGIATAN SECTION</h3>
                         <ul>
-                            <li><a href="/#acara">Agenda Kegiatan</a></li>
-                            <li><a href="/#timeline">Liminasa Kegiatan</a></li>
-                            <li><a href="/faq">FAQs Kegiatan</a></li>
+                            <li><a href="/front-end-section-react/#acara">Agenda Kegiatan</a></li>
+                            <li><a href="/front-end-section-react/#timeline">Liminasa Kegiatan</a></li>
+                            <li><a href="/front-end-section-react/faq">FAQs Kegiatan</a></li>
                         </ul>
                     </div>
                     <div className="col-sm-4 col-md-3 item">

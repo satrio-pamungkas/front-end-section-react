@@ -16,23 +16,23 @@ export const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarText">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="/">BERANDA</a>
+                            <a className="nav-link active" aria-current="page" href="/front-end-section-react">BERANDA</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/#acara">AGENDA</a>
+                            <a className="nav-link" href="/front-end-section-react/#acara">AGENDA</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/#timeline">LINIMASA</a>
+                            <a className="nav-link" href="/front-end-section-react/#timeline">LINIMASA</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/faq">FAQ</a>
+                            <a className="nav-link" href="/front-end-section-react/faq">FAQ</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/#kontak">KONTAK</a>
+                            <a className="nav-link" href="/front-end-section-react/#kontak">KONTAK</a>
                         </li>
                     </ul>
                     <span className="navbar-text">
-                        <a href="/daftar">
+                        <a href="/front-end-section-react/daftar">
                             <button className="btn btn-warning">
                                 DAFTAR PESERTA
                             </button>
